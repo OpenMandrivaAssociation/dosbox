@@ -1,13 +1,13 @@
 %define	name	dosbox
-%define version 0.70
-%define release %mkrel 2
+%define version 0.71
+%define release %mkrel 1
 %define	Summary	A DOS emulator
 
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
 Summary:	%{Summary}
-Source0:	http://prdownloads.sourceforge.net/dosbox/%{name}-%{version}.tar.bz2
+Source0:	http://prdownloads.sourceforge.net/dosbox/%{name}-%{version}.tar.gz
 #Source2:	%{name}.conf.bz2
 Source11:	%{name}-16x16.png
 Source12:	%{name}-32x32.png
@@ -44,18 +44,7 @@ new computer!
 rm -rf %{buildroot}
 %makeinstall
 rm -rf %{buildroot}%{_datadir}/doc/dosbox
-#install -d %{buildroot}%{_sysconfdir}
-#bzip2 -dc %{SOURCE2} > %{buildroot}%{_sysconfdir}/%{name}.conf
 
-install -d %{buildroot}%{_menudir}
-cat <<EOF > %{buildroot}%{_menudir}/%{name}
-?package(%{name}):command="%{_bindir}/%{name}" \
-		icon=%{name}.png \
-		needs="x11" \
-		section="More Applications/Emulators" \
-		title="DOSBox"\
-		longtitle="%{Summary}" xdg="true"
-EOF
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
 cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-%{name}.desktop << EOF
 [Desktop Entry]
@@ -88,13 +77,11 @@ rm -rf %{buildroot}
 %defattr(755,root,root,755)
 %{_bindir}/%{name}
 %defattr(644,root,root,755)
-#%config(noreplace) %{_sysconfdir}/%{name}.conf
 %{_mandir}/*/*
 %{_iconsdir}/%{name}.png
 %{_liconsdir}/%{name}.png
 %{_miconsdir}/%{name}.png
 %{_datadir}/applications/mandriva*
-%{_menudir}/%{name}
 %doc AUTHORS ChangeLog NEWS README THANKS
 
 
