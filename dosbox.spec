@@ -1,5 +1,5 @@
 %define	name	dosbox
-%define version 0.71
+%define version 0.72
 %define release %mkrel 1
 %define	Summary	A DOS emulator
 
@@ -50,7 +50,7 @@ cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-%{name}.desktop << EOF
 [Desktop Entry]
 Encoding=UTF-8
 Name=DOSBox
-Comment=%{Summary}
+Comment=A DOS emulator
 Exec=%{name}
 Icon=%{name}
 Terminal=false
@@ -81,7 +81,5 @@ rm -rf %{buildroot}
 %{_iconsdir}/%{name}.png
 %{_liconsdir}/%{name}.png
 %{_miconsdir}/%{name}.png
-%{_datadir}/applications/mandriva*
+%{_datadir}/applications/*.desktop
 %doc AUTHORS ChangeLog NEWS README THANKS
-
-
