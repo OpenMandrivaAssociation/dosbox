@@ -16,7 +16,6 @@ License:	GPL
 Group:		Emulators
 URL:		http://dosbox.sourceforge.net/
 BuildRequires:	png-devel SDL-devel SDL_net-devel SDL_sound-devel mesaglu-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 DOSBox is a DOS-emulator that uses the SDL-library which makes
