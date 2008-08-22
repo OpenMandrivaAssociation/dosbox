@@ -8,10 +8,10 @@ Version:	%{version}
 Release:	%{release}
 Summary:	%{Summary}
 Source0:	http://prdownloads.sourceforge.net/dosbox/%{name}-%{version}.tar.gz
-#Source2:	%{name}.conf.bz2
 Source11:	%{name}-16x16.png
 Source12:	%{name}-32x32.png
 Source13:	%{name}-48x48.png
+Patch0:		%{name}-gcc43.patch
 License:	GPL
 Group:		Emulators
 URL:		http://dosbox.sourceforge.net/
@@ -35,6 +35,7 @@ new computer!
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %configure2_5x	--enable-core-inline
@@ -55,7 +56,7 @@ Icon=%{name}
 Terminal=false
 Type=Application
 StartupNotify=true
-Categories=X-MandrivaLinux-MoreApplications-Emulators;Emulator;
+Categories=Emulator;
 EOF
 
 
