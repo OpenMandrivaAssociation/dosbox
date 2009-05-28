@@ -1,6 +1,6 @@
 %define	name	dosbox
-%define version 0.72
-%define release %mkrel 3
+%define version 0.73
+%define release %mkrel 1
 %define	Summary	A DOS emulator
 
 Name:		%{name}
@@ -11,7 +11,7 @@ Source0:	http://prdownloads.sourceforge.net/dosbox/%{name}-%{version}.tar.gz
 Source11:	%{name}-16x16.png
 Source12:	%{name}-32x32.png
 Source13:	%{name}-48x48.png
-Patch0:		%{name}-gcc43.patch
+Patch0:		dosbox-0.73-fix-str-fmt.patch
 License:	GPL
 Group:		Emulators
 URL:		http://dosbox.sourceforge.net/
@@ -35,7 +35,7 @@ new computer!
 
 %prep
 %setup -q
-%patch0 -p1
+%patch0 -p0
 
 %build
 %configure2_5x	--enable-core-inline
