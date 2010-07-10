@@ -35,7 +35,7 @@ new computer!
 
 %prep
 %setup -q
-# %patch0 -p0
+%patch0 -p0
 
 %build
 %configure2_5x	--enable-core-inline
