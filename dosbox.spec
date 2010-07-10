@@ -1,5 +1,5 @@
 %define	name	dosbox
-%define version 0.73
+%define version 0.74
 %define release %mkrel 1
 %define	Summary	A DOS emulator
 
@@ -7,7 +7,7 @@ Name:		%{name}
 Version:	%{version}
 Release:	%{release}
 Summary:	%{Summary}
-Source0:	http://prdownloads.sourceforge.net/dosbox/%{name}-%{version}.tar.gz
+Source0:	http://prdownloads.sourceforge.net/dosbox/%{name}-%{version}.tar.bz2
 Source11:	%{name}-16x16.png
 Source12:	%{name}-32x32.png
 Source13:	%{name}-48x48.png
@@ -35,7 +35,7 @@ new computer!
 
 %prep
 %setup -q
-%patch0 -p0
+# %patch0 -p0
 
 %build
 %configure2_5x	--enable-core-inline
