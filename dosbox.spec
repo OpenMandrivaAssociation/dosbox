@@ -21,7 +21,7 @@ License:	GPL
 Group:		Emulators
 URL:		http://dosbox.sourceforge.net/
 BuildRequires:	png-devel libSDL-devel libSDL_net-devel 
-BuildRequires:  libSDL_sound-devel  
+BuildRequires:  SDL_sound-devel = 1.0.3-11  
 BuildRequires:  libalsa-devel zlib1-devel libx11-devel
 
 %description
