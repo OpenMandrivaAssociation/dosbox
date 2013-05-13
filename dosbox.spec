@@ -1,6 +1,6 @@
 %define	name	dosbox
 %define version 0.74
-%define release %mkrel 1
+%define release  2
 %define	Summary	A DOS emulator
 
 Name:		%{name}
