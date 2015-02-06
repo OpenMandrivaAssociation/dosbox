@@ -1,7 +1,7 @@
 Summary:	A DOS emulator
 Name:		dosbox
 Version:	0.74
-Release:	3
+Release:	4
 License:	GPLv2+
 Group:		Emulators
 Url:		http://dosbox.sourceforge.net/
