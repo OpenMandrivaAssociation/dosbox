@@ -1,7 +1,7 @@
 Summary:	A DOS emulator
 Name:		dosbox
 Version:	0.74
-Release:	4
+Release:	5
 License:	GPLv2+
 Group:		Emulators
 Url:		http://dosbox.sourceforge.net/
@@ -12,6 +12,8 @@ Source13:	%{name}-48x48.png
 Patch0:		dosbox-0.73-fix-str-fmt.patch
 # patch for gcc-4.6. Thnx to Gentoo
 Patch1:		dosbox-0.74-gcc46.patch
+# (fedora) fix a crash in the joy-button mapping init when compiled with gcc-4.8
+Patch2:		dosbox-0.74-init-crash.patch
 BuildRequires:	SDL_sound-devel
 BuildRequires:	pkgconfig(alsa)
 BuildRequires:	pkgconfig(gl)
@@ -52,6 +54,7 @@ new computer!
 %setup -q
 %patch0 -p0
 %patch1 -p0
+%patch2 -p1
 
 %build
 %configure2_5x
