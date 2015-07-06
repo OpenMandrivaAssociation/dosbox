@@ -57,6 +57,12 @@ new computer!
 %patch2 -p1
 
 %build
+%if %mdvver >= 201500
+%ifarch %ix86
+export CC="gcc"
+export CXX="g++"
+%endif
+%endif
 %configure2_5x
 %make
 
