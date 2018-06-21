@@ -11,6 +11,7 @@ Source0:	http://prdownloads.sourceforge.net/dosbox/%{name}-%{version}.tar.xz
 Source11:	%{name}-16x16.png
 Source12:	%{name}-32x32.png
 Source13:	%{name}-48x48.png
+Patch0:		dosbox-0.74.4119-defaultsettings.patch
 BuildRequires:	SDL_sound-devel
 BuildRequires:	pkgconfig(alsa)
 BuildRequires:	pkgconfig(gl)

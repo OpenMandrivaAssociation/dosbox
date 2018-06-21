@@ -1,0 +1,12 @@
+diff -up dosbox-0.74.4119/src/gui/sdlmain.cpp.omv~ dosbox-0.74.4119/src/gui/sdlmain.cpp
+--- dosbox-0.74.4119/src/gui/sdlmain.cpp.omv~	2018-06-21 18:16:10.134162030 +0200
++++ dosbox-0.74.4119/src/gui/sdlmain.cpp	2018-06-21 18:16:31.330160862 +0200
+@@ -1710,7 +1710,7 @@ void Config_Add_SDL() {
+ 	Pstring->Set_help("What video system to use for output.");
+ 	Pstring->Set_values(outputs);
+ 
+-	Pbool = sdl_sec->Add_bool("autolock",Property::Changeable::Always,true);
++	Pbool = sdl_sec->Add_bool("autolock",Property::Changeable::Always,false);
+ 	Pbool->Set_help("Mouse will automatically lock, if you click on the screen. (Press CTRL-F10 to unlock)");
+ 
+ 	Pint = sdl_sec->Add_int("sensitivity",Property::Changeable::Always,100);
