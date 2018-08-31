@@ -50,6 +50,7 @@ new computer!
 #----------------------------------------------------------------------------
 
 %prep
+%setup -qn%{name}-%{version}-2
 %autosetup -p1
 [ -e autogen.sh ] && ./autogen.sh
 
