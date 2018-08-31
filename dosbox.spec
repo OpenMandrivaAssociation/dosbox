@@ -8,7 +8,7 @@ Url:		http://dosbox.sourceforge.net/
 # Code taken from svn
 # svn checkout https://svn.code.sf.net/p/dosbox/code-0/dosbox/trunk dosbox-%{version}
 #Source0:	http://prdownloads.sourceforge.net/dosbox/%{name}-%{version}.tar.xz
-Source0:  %{name}-%{version}.tar.gz
+Source0:  %{name}-%{version}.tar.bz2
 Source11:	%{name}-16x16.png
 Source12:	%{name}-32x32.png
 Source13:	%{name}-48x48.png
