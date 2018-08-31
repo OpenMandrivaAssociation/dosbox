@@ -1,6 +1,6 @@
 Summary:	A DOS emulator
 Name:		dosbox
-Version:	0.74.4119
+Version:	0.74.2
 Release:	1
 License:	GPLv2+
 Group:		Emulators
