@@ -1,13 +1,14 @@
 Summary:	A DOS emulator
 Name:		dosbox
-Version:	0.74.4119
+Version:	0.74.2
 Release:	1
 License:	GPLv2+
 Group:		Emulators
 Url:		http://dosbox.sourceforge.net/
 # Code taken from svn
 # svn checkout https://svn.code.sf.net/p/dosbox/code-0/dosbox/trunk dosbox-%{version}
-Source0:	http://prdownloads.sourceforge.net/dosbox/%{name}-%{version}.tar.xz
+#Source0:	http://prdownloads.sourceforge.net/dosbox/%{name}-%{version}.tar.xz
+Source0:  %{name}-%{version}.tar.bz2
 Source11:	%{name}-16x16.png
 Source12:	%{name}-32x32.png
 Source13:	%{name}-48x48.png
