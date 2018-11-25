@@ -50,15 +50,14 @@ new computer!
 #----------------------------------------------------------------------------
 
 %prep
-%autosetup -p1
+%setup -q
+%apply_patches
 [ -e autogen.sh ] && ./autogen.sh
 
 %build
-%if %mdvver >= 201500
 %ifarch %ix86
 export CC="gcc"
 export CXX="g++"
-%endif
 %endif
 %configure
 %make
