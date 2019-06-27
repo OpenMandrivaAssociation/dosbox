@@ -1,6 +1,6 @@
 Summary:	A DOS emulator
 Name:		dosbox
-Version:	0.74.2
+Version:	0.74.3
 Release:	1
 License:	GPLv2+
 Group:		Emulators
@@ -8,7 +8,7 @@ Url:		http://dosbox.sourceforge.net/
 # Code taken from svn
 # svn checkout https://svn.code.sf.net/p/dosbox/code-0/dosbox/trunk dosbox-%{version}
 #Source0:	http://prdownloads.sourceforge.net/dosbox/%{name}-%{version}.tar.xz
-Source0:  %{name}-%{version}.tar.bz2
+Source0:	http://downloads.sourceforge.net/dosbox/%{name}-%(echo %{version} |cut -d. -f1-2)-%(echo %{version} |cut -d. -f3-).tar.gz
 Source11:	%{name}-16x16.png
 Source12:	%{name}-32x32.png
 Source13:	%{name}-48x48.png
@@ -50,7 +50,7 @@ new computer!
 #----------------------------------------------------------------------------
 
 %prep
-%autosetup -p1
+%autosetup -p1 -n %{name}-%(echo %{version} |cut -d. -f1-2)-%(echo %{version} |cut -d. -f3-)
 [ -e autogen.sh ] && ./autogen.sh
 
 %build
