@@ -1,7 +1,7 @@
 Summary:	A DOS emulator
 Name:		dosbox
 Version:	0.74.3
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Emulators
 Url:		http://dosbox.sourceforge.net/
@@ -13,6 +13,7 @@ Source11:	%{name}-16x16.png
 Source12:	%{name}-32x32.png
 Source13:	%{name}-48x48.png
 Patch0:		dosbox-0.74.4119-defaultsettings.patch
+Patch1:		https://www.dosbox.com/downloads/74-3-events.diff
 BuildRequires:	SDL_sound-devel
 BuildRequires:	pkgconfig(alsa)
 BuildRequires:	pkgconfig(gl)
