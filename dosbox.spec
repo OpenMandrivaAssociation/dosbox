@@ -4,7 +4,7 @@ Version:	0.74.3
 Release:	3
 License:	GPLv2+
 Group:		Emulators
-Url:		http://dosbox.sourceforge.net/
+Url:		https://dosbox.sourceforge.net/
 # Code taken from svn
 # svn checkout https://svn.code.sf.net/p/dosbox/code-0/dosbox/trunk dosbox-%{version}
 #Source0:	http://prdownloads.sourceforge.net/dosbox/%{name}-%{version}.tar.xz
