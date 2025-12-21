@@ -14,6 +14,11 @@ Source12:	%{name}-32x32.png
 Source13:	%{name}-48x48.png
 Patch0:		dosbox-0.74.4119-defaultsettings.patch
 Patch1:		https://www.dosbox.com/downloads/74-3-events.diff
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	SDL_sound-devel
 BuildRequires:	pkgconfig(alsa)
 BuildRequires:	pkgconfig(gl)
